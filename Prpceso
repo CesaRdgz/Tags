@@ -1,0 +1,199 @@
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa
+$ git init
+Initialized empty Git repository in D:/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa/.git/
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git add Readme.txt
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git commit -m "primera version"
+[master (root-commit) ec238e0] primera version
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Readme.txt
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git push https://github.com/CesaRdgz/Tags master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 242 bytes | 242.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/CesaRdgz/Tags
+ * [new branch]      master -> master
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git add Readme.txt
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Readme.txt
+
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git commit -m"Segunda version"
+[master 74feeca] Segunda version
+ 1 file changed, 1 insertion(+)
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git push https://github.com/CesaRdgz/Tags master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 291 bytes | 291.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/CesaRdgz/Tags
+   ec238e0..74feeca  master -> master
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git log
+commit 74feeca2f44994ea325e81f5ef4dbd75bce2924d (HEAD -> master)
+Author: Cesar Rodriguez <cesar.rodriguez8@educa.madrid.org>
+Date:   Fri Nov 20 19:11:20 2020 +0100
+
+    Segunda version
+
+commit ec238e0866e16a552fbc3761beed4411b04425f0
+Author: Cesar Rodriguez <cesar.rodriguez8@educa.madrid.org>
+Date:   Fri Nov 20 19:08:57 2020 +0100
+
+    primera version
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git tag v1.0 ec238e0 -m "Primer tag"
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git tag
+v1.0
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git push https://github.com/CesaRdgz/Tags v1.0
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 172 bytes | 172.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/CesaRdgz/Tags
+ * [new tag]         v1.0 -> v1.0
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git checkout v1.0
+Note: switching to 'v1.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ec238e0 primera version
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa ((v1.0))
+$ git status
+HEAD detached at v1.0
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa ((v1.0))
+$ git commit -m"pruebatag"
+HEAD detached at v1.0
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa ((v1.0))
+$ git add Readme.txt
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa ((v1.0))
+$ git status
+HEAD detached at v1.0
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Readme.txt
+
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa ((v1.0))
+$ git commit -m"pruebatag"
+[detached HEAD 1731ec2] pruebatag
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa ((1731ec2...))
+$ git push https://github.com/CesaRdgz/Tags.git
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push https://github.com/CesaRdgz/Tags.git HEAD:<name-of-remote-branch>
+
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa ((1731ec2...))
+$ git checkout master
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  1731ec2 pruebatag
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 1731ec2
+
+Switched to branch 'master'
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$ git pull --tags https://github.com/CesaRdgz/Tags.git
+From https://github.com/CesaRdgz/Tags
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaCasa (master)
+$
+
+
+Carpeta Insti
+
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaInsti
+$ git pull https://github.com/CesaRdgz/Tags master
+fatal: not a git repository (or any of the parent directories): .git
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaInsti
+$ git init
+Initialized empty Git repository in D:/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaInsti/.git/
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaInsti (master)
+$ git pull https://github.com/CesaRdgz/Tags master
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 1), reused 5 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 445 bytes | 1024 bytes/s, done.
+From https://github.com/CesaRdgz/Tags
+ * branch            master     -> FETCH_HEAD
+
+daw1_b@1DAM-02 MINGW64 /d/Educa/daw1_b/Escritorio/Nueva carpeta/CarpetaInsti (master)
